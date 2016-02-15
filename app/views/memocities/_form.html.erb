@@ -1,0 +1,29 @@
+<%= form_for(@memocity) do |f| %>
+  <% if @memocity.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@memocity.errors.count, "error") %> prohibited this memocity from being saved:</h2>
+
+      <ul>
+      <% @memocity.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :phoneNumberMemo %><br>
+    <%= f.text_field :phoneNumberMemo %>
+  </div>
+  <div class="field">
+    <%= f.label :contentMemo %><br>
+    <%= f.text_area :contentMemo %>
+  </div>
+  <div class="field">
+    <%= f.label :activationDateMemo %><br>
+    <%= f.datetime :activationDateMemo %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

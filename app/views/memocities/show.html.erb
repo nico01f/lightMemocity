@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Phonenumbermemo:</strong>
+  <%= @memocity.phoneNumberMemo %>
+</p>
+
+<p>
+  <strong>Contentmemo:</strong>
+  <%= @memocity.contentMemo %>
+</p>
+
+<p>
+  <strong>Activationdatememo:</strong>
+  <%= @memocity.activationDateMemo %>
+</p>
+
+<%= link_to 'Edit', edit_memocity_path(@memocity) %> |
+<%= link_to 'Back', memocities_path %>

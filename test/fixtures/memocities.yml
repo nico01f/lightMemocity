@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  phoneNumberMemo: MyString
+  contentMemo: MyText
+  activationDateMemo: 2016-02-15 14:12:08
+
+two:
+  phoneNumberMemo: MyString
+  contentMemo: MyText
+  activationDateMemo: 2016-02-15 14:12:08
