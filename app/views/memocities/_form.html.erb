@@ -12,18 +12,16 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :phoneNumberMemo %><br>
-    <%= f.text_field :phoneNumberMemo %>
+    <%= f.text_field :phoneNumberMemo, placeholder: "Teléfono. Ejemplo: 56912345678" %>
   </div>
   <div class="field">
-    <%= f.label :contentMemo %><br>
-    <%= f.text_area :contentMemo %>
+    <%= f.text_area :contentMemo, placeholder: "Contenido a recordar" %>
   </div>
   <div class="field">
-    <%= f.label :activationDateMemo %><br>
+    <%= f.label "Cuando activar" %><br>
     <%= f.datetime_select :activationDateMemo %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Generar" %>
   </div>
 <% end %>
