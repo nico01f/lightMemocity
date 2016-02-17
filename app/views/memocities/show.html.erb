@@ -1,19 +1,20 @@
 <p id="notice"><%= notice %></p>
 
+<h2>Resumen del recordatorio</h2>
 <p>
-  <strong>Phonenumbermemo:</strong>
+  <strong>Número a llamar:</strong>
   <%= @memocity.phoneNumberMemo %>
 </p>
 
 <p>
-  <strong>Contentmemo:</strong>
+  <strong>Qué se recordará:</strong>
   <%= @memocity.contentMemo %>
 </p>
 
 <p>
-  <strong>Activationdatememo:</strong>
-  <%= @memocity.activationDateMemo %>
+  <strong>Cuando se llamará:</strong>
+  <%= @memocity.activationDateMemo.strftime("%d/%m/%y a las %H:%M") %>
 </p>
 
-<%= link_to 'Edit', edit_memocity_path(@memocity) %> |
-<%= link_to 'Back', memocities_path %>
+<%= link_to 'Editar', edit_memocity_path(@memocity) %> |
+<%= link_to 'Guardar', memocities_path %>
