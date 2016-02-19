@@ -1,19 +1,23 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
-@import url(https://fonts.googleapis.com/css?family=Monoton);
-@import url(https://fonts.googleapis.com/css?family=Arvo);
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+@import url(https://fonts.googleapis.com/css?family=Catamaran);
+
+
+
 body {
   padding-top: 60px;
 }
 
 .navbar-brand {
   float: left;
-font-family: 'Monoton', cursive;
-  color: #c43dff;
+font-family: 'Pacifico', cursive;
   padding: 12px 12px;
   padding-left: 50%;
-  font-size: 25px;
+  font-size: 30px;
   line-height: 21px;
   height: 45px;
 }
@@ -29,7 +33,10 @@ section {
 
 
 p, ul, ol {
-font-family: 'Arvo', serif;
+font-family: 'Catamaran', sans-serif;
+font-size: 15px;
+
+
 }
 
 textarea {
