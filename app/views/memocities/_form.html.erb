@@ -1,7 +1,7 @@
 <%= form_for(@memocity) do |f| %>
   <% if @memocity.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@memocity.errors.count, "error") %> prohibited this memocity from being saved:</h2>
+      <h2><%= pluralize(@memocity.errors.count, "error") %> en el formulario</h2>
 
       <ul>
       <% @memocity.errors.full_messages.each do |message| %>
