@@ -3,9 +3,10 @@ class Memocity < ActiveRecord::Base
   VALID_PHONE_NUMBER_REGEX = /\A(?:\+?|\b)[0-9]{11}\b/i
 
   validates :phoneNumberMemo, presence: true, length: { maximum: 11}, format: { with: VALID_PHONE_NUMBER_REGEX }
-  validates :contentMemo, presence: true, length: { maximum: 120 }
+  #validates :contentMemo, presence: true, length: { maximum: 120 }
   validates :activationDateMemo, presence: true
   validate :activation_date_greater_than_now
+  validate :contentMemo_is_valid
   private
 
   def capitalize_content
@@ -13,8 +14,18 @@ class Memocity < ActiveRecord::Base
   end
 
   def activation_date_greater_than_now
-    if self.activationDateMemo <= Time.now
-      errors.add(:base, "Fecha debe ser mayor a la actual")
+    if self.activationDateMemo <= DateTime.now
+      errors.add(:base, "Fecha/Hora debe ser mayor a la actual")
     end
   end
+
+  def contentMemo_is_valid
+    if self.contentMemo.empty?
+      errors.add(:base, "Contenido no puede quedar en blanco")
+    elsif self.contentMemo.length > 140
+      errors.add(:base, "El recodatorio no puede ser mayor a 140 caracteres")
+    end
+  end
+
+
 end
