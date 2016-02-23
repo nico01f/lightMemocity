@@ -7,6 +7,8 @@ class Memocity < ActiveRecord::Base
   validates :activationDateMemo, presence: true
   validate :activation_date_greater_than_now
   validate :contentMemo_is_valid
+
+
   private
 
   def capitalize_content
