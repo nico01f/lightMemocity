@@ -2,10 +2,9 @@
 @import "bootstrap";
 
 
-@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url(https://fonts.googleapis.com/css?family=Bree+Serif);
 @import url(https://fonts.googleapis.com/css?family=Pacifico);
-@import url(https://fonts.googleapis.com/css?family=Catamaran);
-
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic");
 
 
 body {
@@ -14,17 +13,22 @@ body {
 
 .navbar-brand {
   float: left;
-font-family: 'Pacifico', cursive;
+  font-family: 'Pacifico', cursive;
   padding: 12px 12px;
-  padding-left: 50%;
+  padding-left: 45%;
   font-size: 30px;
   line-height: 21px;
   height: 45px;
 }
 
+.section-heading {
+  margin-bottom: 30px
+}
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Bree Serif', serif;
+  font-weight: 400;
 
-h1, h2, h3, h4 {
-  font-family: 'Montserrat', sans-serif;
+
 }
 
 section {
@@ -33,14 +37,27 @@ section {
 
 
 p, ul, ol,li {
-font-family: 'Catamaran', sans-serif;
-font-size: 15px;
-
-
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 200;
 }
 
 textarea {
   resize: vertical;
   width: 300px;
-height: 150px;
+  height: 150px;
+}
+
+
+.content-section-a {
+  padding: 50px 0;
+}
+
+.content-section-b {
+  padding: 50px 0;
+}
+
+.lead {
+  font-size: 18px;
+  font-weight: 400
 }
